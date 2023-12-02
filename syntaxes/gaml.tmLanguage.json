@@ -1,0 +1,115 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "GAML",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#inheritance"
+        },
+        {
+            "include": "#virtuality"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.gaml",
+                "match": "\\b(model|global|draw|species|ask|action|aspect|experiment|init|return|returns|reflex|output|grid|file|loop|if|else|switch|case|geometry|list|map|float|int|bool|string|rgb|skill)\\b"
+            }]
+        },
+        "operators": {
+            "patterns": [{
+                "name": "keyword.operator.gaml",
+                "match": "\\b(<-|->|<<|>>|==|!=|<=|>=|&&|\\|\\||\\+|\\-|\\*|\\/|%)\\b"
+            }]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.gaml",
+                    "begin": "//",
+                    "end": "$"
+                },
+                {
+                    "name": "comment.block.gaml",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },        
+        "strings": {
+            "name": "string.quoted.double.gaml",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.gaml",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "support.type.gaml",
+                    "match": "\\b(bool|int|float|string|rgb|list|map|skill)\\b"
+                },
+                {
+                    "name": "support.type.builtin.gaml",
+                    "match": "\\b(true|false|nil)\\b"
+                },
+                {
+                    "name": "support.type.user-defined.gaml",
+                    "match": "\\b\\w+\\s+(?=\\w+\\s*;)"
+                },
+                {
+                    "name": "support.type.user-defined.gaml",
+                    "match": "(?<=:)\\w+"
+                },
+                {
+                    "name": "support.type.user-defined.gaml",
+                    "match": "(?<=<)(.*?)(?=>)"
+                },
+                {
+                    "name": "support.type.user-defined.gaml",
+                    "match": "(?<=<)(.*?)(?=,)"
+                },
+                {
+                    "name": "support.type.user-defined.gaml",
+                    "match": "(?<=, )(.*?)(?=>)"
+                }
+            ]
+        },
+        "inheritance": {
+            "patterns": [
+                {
+                    "name": "keyword.other.inheritance.gaml",
+                    "match": "\\b(parent)\\b"
+                }
+            ]
+        },
+        "virtuality": {
+            "patterns": [
+                {
+                    "name": "keyword.other.virtual.gaml",
+                    "match": "\\b(virtual)\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.gaml"
+}

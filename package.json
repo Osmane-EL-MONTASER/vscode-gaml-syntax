@@ -1,0 +1,25 @@
+{
+  "name": "vscode-gaml-syntax",
+  "displayName": "GAML Syntax Highlighter",
+  "description": "A GAML Syntax Highlighter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "gaml",
+      "aliases": ["GAML", "gaml"],
+      "extensions": [".gaml"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "gaml",
+      "scopeName": "source.gaml",
+      "path": "./syntaxes/gaml.tmLanguage.json"
+    }]
+  }
+}
