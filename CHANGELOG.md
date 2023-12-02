@@ -1,9 +1,11 @@
 # Change Log
 
-All notable changes to the "gaml-syntax-highlighter" extension will be documented in this file.
+## [1.0.0] - 2023-02-12
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Added
 
-## [Unreleased]
-
-- Initial release
+- Syntax highlighting for user-defined types
+- Syntax highlighting for keywords (e.g. `agent`, `action`, `species`, etc.)
+- Syntax highlighting for comments
+- Syntax highlighting for strings
+- Syntax highlighting for boolean values (e.g. `true`, `false`)
