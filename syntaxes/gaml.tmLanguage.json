@@ -22,13 +22,16 @@
         },
         {
             "include": "#virtuality"
+        },
+        {
+            "include": "#numbers"
         }
     ],
     "repository": {
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.gaml",
-                "match": "\\b(model|global|draw|species|ask|action|aspect|experiment|init|return|returns|reflex|output|grid|file|loop|if|else|switch|case|geometry|list|map|float|int|bool|string|rgb|skill)\\b"
+                "match": "\\b(model|write|chart|type|series|size|position|copy|color|px|data|display|aspect|action|reflex|ask|do|global|create|number|over|draw|species|ask|action|aspect|experiment|init|return|returns|reflex|output|grid|file|loop|if|else|switch|case|geometry|list|map|float|int|bool|string|rgb|skill)\\b"
             }]
         },
         "operators": {
@@ -53,12 +56,10 @@
         },        
         "strings": {
             "name": "string.quoted.double.gaml",
-            "begin": "\"",
-            "end": "\"",
             "patterns": [
                 {
                     "name": "constant.character.escape.gaml",
-                    "match": "\\\\."
+                    "match": "\"(.*?)\""
                 }
             ]
         },
@@ -82,15 +83,31 @@
                 },
                 {
                     "name": "support.type.user-defined.gaml",
+                    "match": "(\\w+)(?= \\w+ <-)"
+                },
+                {
+                    "name": "support.type.user-defined.gaml",
                     "match": "(?<=<)(.*?)(?=>)"
                 },
                 {
                     "name": "support.type.user-defined.gaml",
-                    "match": "(?<=<)(.*?)(?=,)"
+                    "match": "^(?!\\s*(ask|action|aspect|display|species|reflex)\\b)\\s*(\\w+)(?=\\s+\\w+\\s*\\{)"
                 },
                 {
                     "name": "support.type.user-defined.gaml",
                     "match": "(?<=, )(.*?)(?=>)"
+                },
+                {
+                    "name": "support.type.user-defined.gaml",
+                    "match": "(?<=\\(|, )\\s*\\w+(?=\\s+\\w+)"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.gaml",
+                    "match": "\\b(\\d+(\\.\\d+)?)\\b"
                 }
             ]
         },
