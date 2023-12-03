@@ -2,20 +2,6 @@
 
 This extension provides syntax highlighting for the GAML language.
 
-Here is an example of the syntax highlighting with a dark theme:
-
-<div align="center">
-  <img src="images/dark.png" alt="feature X" width="960" height="540"/>
-</div>
-
-And here is an example of the syntax highlighting with a light theme:
-
-<div align="center">
-  <img src="images/light.png" alt="feature X" width="960" height="540"/>
-</div>
-
-> Note: This extension is in development. If you have any issues or suggestions, please open an issue.
-
 ## Installation
 
 After downloading the latest release, follow these steps to install the GAML Syntax Highlighter extension:
@@ -43,6 +29,20 @@ After downloading the latest release, follow these steps to install the GAML Syn
 ```
 
 4. Close and then restart Visual Studio Code to apply the changes.
+
+Here is an example of the syntax highlighting with a dark theme:
+
+<div align="center">
+  <img src="images/dark.png" alt="feature X" width="960" height="540"/>
+</div>
+
+And here is an example of the syntax highlighting with a light theme:
+
+<div align="center">
+  <img src="images/light.png" alt="feature X" width="960" height="540"/>
+</div>
+
+> Note: This extension is in development. If you have any issues or suggestions, please open an issue.
 
 ## Release Notes
 
